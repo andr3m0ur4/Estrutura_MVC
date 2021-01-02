@@ -4,9 +4,12 @@
     {
         public function index()
         {
+            $anuncios = new Anuncio;
+            $usuarios = new Usuario;
+
             $dados = [
-                'quantidade' => 5,
-                'nome' => 'André Moura'
+                'quantidade' => $anuncios->getQuantidade(),
+                'nome' => $usuarios->getName()
             ];
 
             $this->loadTemplate('home', $dados);
