@@ -1,14 +1,14 @@
 <?php
 
-    class homeController
+    class homeController extends Controller
     {
         public function index()
         {
-            echo 'Olá mundo!!';
-        }
+            $dados = [
+                'quantidade' => 5,
+                'nome' => 'André Moura'
+            ];
 
-        public function teste()
-        {
-            echo 'Este é um teste!';
+            $this->loadTemplate('home', $dados);
         }
     }

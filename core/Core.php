@@ -34,10 +34,5 @@
 
             call_user_func_array([$controller, $currentAction], $params);
 
-            echo '<hr>';
-            echo "CONTROLLER: {$currentController} <br>";
-            echo "ACTION: {$currentAction} <br>";
-            echo "PARAMS: " . print_r($params, true);
         }
     }
-    
