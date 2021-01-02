@@ -2,4 +2,4 @@
 
 <h2>Você tem <?= $quantidade ?> anúncios.</h2>
 
-<img src="https://www.google.com.br/google.jpg" alt="Google">
+<img src="/assets/images/google.jpg" alt="Google">

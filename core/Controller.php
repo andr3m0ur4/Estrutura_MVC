@@ -12,8 +12,6 @@
         public function loadTemplate($viewName, $viewData = [])
         {
             require 'views/template.php';
-
-            $this->loadViewInTemplate($viewName, $viewData);
         }
 
         public function loadViewInTemplate($viewName, $viewData = [])
