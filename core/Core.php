@@ -6,26 +6,38 @@
         {
             $url = '/';
             $url .= $_GET['url'] ?? '';
+            $params = [];
 
             if (!empty($url) && $url != '/') {
                 $url = explode('/', $url);
                 array_shift($url);
                 
                 $currentController = $url[0] . 'Controller';
+                array_shift($url);
 
-                if (isset($url[1]) && !empty($url[1])) {
-                    $currentAction = $url[1];
+                if (isset($url[0]) && !empty($url[0])) {
+                    $currentAction = $url[0];
+                    array_shift($url);
                 } else {
                     $currentAction = 'index';
+                }
+
+                if (count($url) > 0) {
+                    $params = $url;
                 }
             } else {
                 $currentController = 'homeController';
                 $currentAction = 'index';
             }
-            print_r($url);
+            
+            $controller = new $currentController();
+
+            call_user_func_array([$controller, $currentAction], $params);
 
             echo '<hr>';
             echo "CONTROLLER: {$currentController} <br>";
-            echo "ACTION: {$currentAction}";
+            echo "ACTION: {$currentAction} <br>";
+            echo "PARAMS: " . print_r($params, true);
         }
     }
+    
