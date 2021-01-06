@@ -9,9 +9,7 @@
 
         public function index()
         {
-            $dados = [
-                'qt' => 129
-            ];
+            $dados = [];
 
             $this->loadTemplate('galeria', $dados);
         }

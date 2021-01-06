@@ -9,13 +9,7 @@
         
         public function index()
         {
-            $anuncios = new Anuncio;
-            $usuarios = new Usuario;
-
-            $dados = [
-                'quantidade' => $anuncios->getQuantidade(),
-                'nome' => $usuarios->getName()
-            ];
+            $dados = [];
 
             $this->loadTemplate('home', $dados);
         }

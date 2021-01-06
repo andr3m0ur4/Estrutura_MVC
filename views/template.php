@@ -8,12 +8,6 @@
 </head>
 <body>
 
-    <h1>Este é o topo</h1>
-    <a href="/">Home</a>
-    <a href="/galeria">Galeria</a>
-
-    <hr>
-
     <?= $this->loadViewInTemplate($viewName, $viewData) ?>
 
     <script src="/assets/js/script.js"></script>

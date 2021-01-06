@@ -53,7 +53,7 @@
 
         }
 
-        public function checkRoutes($url)
+        private function checkRoutes($url)
         {
             global $routes;
             
