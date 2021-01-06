@@ -1,6 +1,6 @@
 <?php
 
-    class galeriaController extends Controller
+    class noticiaController extends Controller
     {
         public function __construct()
         {
@@ -16,9 +16,13 @@
             $this->loadTemplate('galeria', $dados);
         }
 
-        public function abrir($id, $titulo)
+        public function abrir($id)
         {
-            echo "ID: {$id}<br>";
+            echo "ID da notícia: {$id}<br>";
+        }
+
+        public function abrirTitulo($titulo)
+        {
             echo "TITULO: {$titulo}";
         }
     }
