@@ -7,7 +7,7 @@
     if (ENVIRONMENT == 'development') {
         define('BASE_URL', 'http://localhost');
         $config = [
-            'dbname' => 'estrutura_mvc',
+            'dbname' => 'classificados',
             'host' => 'localhost',
             'dbuser' => 'andre-moura',
             'dbpass' => 'andre'
