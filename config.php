@@ -7,7 +7,7 @@
     if (ENVIRONMENT == 'development') {
         define('BASE_URL', 'http://localhost');
         $config = [
-            'dbname' => 'classificados',
+            'dbname' => 'blog',
             'host' => '10.0.0.102',
             'dbuser' => 'andre-moura',
             'dbpass' => 'andre'

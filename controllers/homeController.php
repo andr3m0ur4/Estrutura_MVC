@@ -11,6 +11,9 @@
         {
             $data = [];
 
+            $usuarios = new Usuario();
+            $data['usuarios'] = $usuarios->getAll();
+
             $this->loadTemplate('home', $data);
         }
     }
