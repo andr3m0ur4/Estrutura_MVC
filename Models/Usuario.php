@@ -1,5 +1,9 @@
 <?php
 
+    namespace Models;
+
+    use Core\Model;
+
     class Usuario extends Model
     {
         public function getAll()
@@ -10,7 +14,7 @@
             $sql = $this->db->query($sql);
 
             if ($sql->rowCount() > 0) {
-                $array = $sql->fetchAll(PDO::FETCH_OBJ);
+                $array = $sql->fetchAll(\PDO::FETCH_OBJ);
             }
 
             return $array;

@@ -1,28 +1,25 @@
 <?php
 
+    namespace Core;
+
     class Controller
     {
-        public function __construct()
-        {
-            
-        }
-        
         public function loadView($viewName, $viewData = [])
         {
             extract($viewData);
 
-            require "views/{$viewName}.php";
+            require "Views/{$viewName}.php";
         }
 
         public function loadTemplate($viewName, $viewData = [])
         {
-            require 'views/template.php';
+            require 'Views/template.php';
         }
 
         public function loadViewInTemplate($viewName, $viewData = [])
         {
             extract($viewData);
             
-            require "views/{$viewName}.php";
+            require "Views/{$viewName}.php";
         }
     }

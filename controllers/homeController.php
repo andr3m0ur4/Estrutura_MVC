@@ -1,12 +1,12 @@
 <?php
 
-    class homeController extends Controller
+    namespace Controllers;
+
+    use Core\Controller;
+    use Models\Usuario;
+
+    class HomeController extends Controller
     {
-        public function __construct()
-        {
-            parent::__construct();
-        }
-        
         public function index()
         {
             $data = [];

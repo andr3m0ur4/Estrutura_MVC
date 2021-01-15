@@ -1,5 +1,7 @@
 <?php
 
+    namespace Core;
+
     class Core
     {
         public function run()
@@ -41,22 +43,26 @@
                     $params = $url;
                 }
             } else {
-                $currentController = 'homeController';
-                $currentAction = 'index';
-            }
-            
-            if (
-                !file_exists("controllers/{$currentController}.php") || 
-                !method_exists($currentController, $currentAction))
-            {
-                $currentController = 'notFoundController';
+                $currentController = 'HomeController';
                 $currentAction = 'index';
             }
 
+            $currentController = ucfirst($currentController);
+
+            $prefix = '\Controllers\\';
+
+            if (
+                !file_exists("Controllers/{$currentController}.php") ||
+                !method_exists($prefix . $currentController, $currentAction)
+            ) {
+                $currentController = 'NotFoundController';
+                $currentAction = 'index';
+            }
+
+            $currentController = $prefix . $currentController;
             $controller = new $currentController();
 
             call_user_func_array([$controller, $currentAction], $params);
-
         }
 
         private function checkRoutes($url)
