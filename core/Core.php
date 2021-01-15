@@ -4,8 +4,14 @@
     {
         public function run()
         {
-            $url = '/';
-            $url .= $_GET['url'] ?? '';
+            $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+            $url = explode('/', $url);
+
+            if (empty($url[count($url) - 1]) && count($url) > 2) {
+                array_pop($url);
+            }
+
+            $url = implode('/', $url);
             $params = [];
 
             $url = $this->checkRoutes($url);

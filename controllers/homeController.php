@@ -9,8 +9,8 @@
         
         public function index()
         {
-            $dados = [];
+            $data = [];
 
-            $this->loadTemplate('home', $dados);
+            $this->loadTemplate('home', $data);
         }
     }
