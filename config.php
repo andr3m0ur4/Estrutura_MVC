@@ -23,10 +23,3 @@
     }
 
     global $db;
-
-    try {
-        $db = new PDO("mysql:dbname={$config['dbname']};host={$config['host']};charset=utf8",
-        $config['dbuser'], $config['dbpass']);
-    } catch (PDOException $e) {
-        die("ERRO: {$e->getMessage()}");
-    }
