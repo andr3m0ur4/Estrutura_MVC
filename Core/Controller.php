@@ -8,18 +8,18 @@
         {
             extract($viewData);
 
-            require "Views/{$viewName}.php";
+            require "../Views/{$viewName}.php";
         }
 
         public function loadTemplate($viewName, $viewData = [])
         {
-            require 'Views/template.php';
+            require '../Views/template.php';
         }
 
         public function loadViewInTemplate($viewName, $viewData = [])
         {
             extract($viewData);
             
-            require "Views/{$viewName}.php";
+            require "../Views/{$viewName}.php";
         }
     }

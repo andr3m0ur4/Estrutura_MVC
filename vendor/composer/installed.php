@@ -6,19 +6,19 @@
     'aliases' => 
     array (
     ),
-    'reference' => '034172a23485b1c7f31fc19c9bc36ed17e464fae',
-    'name' => '__root__',
+    'reference' => '38e87a2c60361192927524bda52c1ba17c9eae22',
+    'name' => 'mvc/architecture-mvc',
   ),
   'versions' => 
   array (
-    '__root__' => 
+    'mvc/architecture-mvc' => 
     array (
       'pretty_version' => 'dev-master',
       'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '034172a23485b1c7f31fc19c9bc36ed17e464fae',
+      'reference' => '38e87a2c60361192927524bda52c1ba17c9eae22',
     ),
   ),
 );

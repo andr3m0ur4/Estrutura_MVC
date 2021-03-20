@@ -8,7 +8,7 @@
         define('BASE_URL', 'http://localhost');
         $config = [
             'dbname' => 'blog',
-            'host' => '10.0.0.102',
+            'host' => '10.0.0.104',
             'dbuser' => 'andre-moura',
             'dbpass' => 'andre'
         ];
